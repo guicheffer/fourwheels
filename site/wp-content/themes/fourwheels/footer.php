@@ -1,4 +1,4 @@
-        <footer id="footer">
+        <footer id="footer" role="footer">
             test footer
         </footer>
 

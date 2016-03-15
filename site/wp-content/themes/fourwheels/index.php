@@ -34,7 +34,7 @@ $chartset = 'UTF-8';
     
 <?php get_header() ?>
 
-        <main id="content" class="content content-section">
+        <main id="content" class="content content-section" role="content">
             <a class="accessibility-aid" id="view">Ver conteúdo</a>
             
             <?php include('includes/news.inc.php') ?>

@@ -11,6 +11,7 @@
 
 $ads-header-width = 720px
 $ads-header-height = 90px
+$ads-header-vertical-margin = 20px
 
 /* =============================================================================
 	Header Style
@@ -19,3 +20,17 @@ $ads-header-height = 90px
 .ads-header
   width remify($ads-header-width)
   height remify($ads-header-height)
+  margin-top remify($ads-header-vertical-margin)
+  margin-bottom remify($ads-header-vertical-margin)
+
+header
+  background $default-color-brand-typo-website
+  width 100%
+  height remify(80px)
+  .logo-url
+    float left
+  .logo-title
+    height 100%
+    width remify($size-logo)
+    background url('../../../../images/fw-logo.png') no-repeat 10px 20px
+    text-indent $text-visually-hidden
