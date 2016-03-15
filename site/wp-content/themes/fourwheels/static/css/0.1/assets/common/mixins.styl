@@ -1,0 +1,118 @@
+/*
+ * Four Wheels - mixins for general (common/base.styl) and dependencies
+ * Mixins
+ * Author: Joao Guilherme Cheffer Prado
+ * Date: 03/2016
+ */
+
+/* =============================================================================
+   Functions [mixins]
+   =========================================================================== */
+		
+/* Mixing to use pixel converted in rem separate mixin, so it can be used anywhere else [REMIFY] */
+/* Example: remify */
+remify(value)
+	u = unit(value)
+	
+	//return unit(value, u) //fix for now
+
+	if (u is 'px') {
+		return unit(value/16, 'rem')
+	} else {
+		return unit(value, u)
+	}
+
+/* Adjust the way which browsers will understand the performance and style adapted [VENDOR] */
+vendor(property, value)
+	-webkit-{property} value
+	-moz-osx-{property} value
+	-moz-{property} value
+	-ms-{property} value
+	-o-{property} value
+	{property} value
+ 
+animation()
+	vendor('animation', arguments)
+
+border-radius()
+	vendor('border-radius', arguments)
+
+border-top-radius() 
+	vendor('border-top-left-radius', arguments)
+	vendor('border-top-right-radius', arguments)
+
+box-sizing()
+	vendor('box-sizing', arguments)
+
+placeholder(color = $placeholder-page-form-color-default, weight, style = normal)
+	::-webkit-input-placeholder
+		color color
+		font-weight weight
+		font-style style
+
+	:-moz-placeholder
+		color color
+		font-weight weight
+		font-style style
+
+	::-moz-placeholder
+		color color
+		font-weight weight
+		font-style style
+
+	:-ms-input-placeholder
+		color color
+		font-weight weight
+		font-style style
+
+background-clip()
+	vendor('background-clip', arguments)
+ 
+box-shadow() 
+	-moz-box-shadow arguments
+	-webkit-box-shadow arguments
+	box-shadow arguments
+ 
+box(orient, pack, align) 
+	display -webkit-box
+	display -moz-box
+	display box
+	vendor('box-orient', orient)
+	vendor('box-pack', pack)
+	vendor('box-align', align)
+	vendor('box-lines', multiple)
+
+box_flex()
+	vendor('box-flex', arguments)
+ 
+text-fill-color()
+	vendor('text-fill-color', arguments)
+ 
+transition()
+	vendor('transition', arguments)
+ 
+font-smoothing()
+	vendor('font-smoothing', arguments)
+ 
+transform()
+	vendor('transform', arguments)
+ 
+filter()
+	vendor('filter', arguments)
+ 
+user-select()
+	vendor('user-select', arguments)
+
+absolute-center(element_width, pcent = no, dad_element = $default-height-window-container)
+	if (pcent == yes) {
+		left ( (100 - element_width) / 2 )%
+	}else{
+		left 50-( ( element_width * 100 ) / dad_element )%
+	}
+
+generate-grid(increment, start, end)
+	total = start
+	for n, x in 0..((end - start) / increment)
+		.col-{x+1}
+			width total
+		total = total + increment

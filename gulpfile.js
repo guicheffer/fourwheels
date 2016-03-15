@@ -148,9 +148,6 @@ gulp.task('babel', function() {
   var files = [{
     src: path.join(PATHS.scripts.src, 'common/common.js'),
     dest: 'common/common.js'
-  },{
-    src: path.join(PATHS.scripts.src, 'showcase/app.js'),
-    dest: 'showcase/app.js'
   }];
   
   var tasks = files.map(function(entry) {

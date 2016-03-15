@@ -1,0 +1,88 @@
+/*!
+ * Four Wheels! - common/base.styl
+ * Base for fourwheels website 0.1
+ * Author: Joao Guilherme Cheffer Prado
+ * Date: 03/2016
+ */
+
+/* =============================================================================
+	CSS Reset
+   ========================================================================== */
+
+@import 'reset'
+
+
+/* =============================================================================
+	Global Variables
+   ========================================================================== */
+
+@import 'variables'
+
+
+/* =============================================================================
+	Mixins
+   ========================================================================== */
+
+@import 'mixins'
+
+
+/* =============================================================================
+	Fonts
+   =========================================================================== */
+
+@font-face
+	font-family 'DIN'
+	font-style normal
+	font-weight 400
+	src local('DIN'), local('DIN-Regular'), url('/static/fonts/DIN/DIN-Regular.ttf') format('truetype')
+@font-face
+	font-family 'DIN'
+	font-style normal
+	font-weight 700
+	src local('DIN-Bold'), url('/static/fonts/DIN/DIN-Bold.ttf') format('truetype')
+
+/* =============================================================================
+	Local Variables
+   =========================================================================== */
+
+// $section-background-sprite = '/static/images/dist/sprites/sprt-section.png'
+
+
+/* =============================================================================
+	General/Utils
+   =========================================================================== */
+
+body
+	background $default-background-color
+.container
+	width 100%
+.adsbox
+	background $default-background-ads
+	&:before
+		content 'Publicidade'
+		background $gray-highlight
+		float right
+		opacity 0.6
+		padding remify(2px)
+		transition opacity .1s ease-in-out
+		top 0
+	&:hover
+		&:before
+			opacity 1
+.row
+	clear both
+	outline none
+	width 100%
+	&.row-center
+		text-align center
+		*
+			margin 0 auto
+
+.content-section
+	width 100%
+
+/* =============================================================================
+	Header
+   =========================================================================== */
+
+@import 'includes/header'
