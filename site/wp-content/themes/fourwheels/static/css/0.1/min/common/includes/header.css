@@ -4,4 +4,4 @@
  * Author: Joao Guilherme Cheffer Prado
  * Date: 03/2016
  */
-.ads-header{width:remify(720px);height:remify(90px)}
+.ads-header{width:remify(720px);height:remify(90px);margin-top:remify(20px);margin-bottom:remify(20px)}header{background:$default-color-brand-typo-website;width:100%;height:remify(80px);}header .logo-url{float:left}header .logo-title{height:100%;width:remify($size-logo);background:url("../../../../images/fw-logo.png") no-repeat 10px 20px;text-indent:$text-visually-hidden}
