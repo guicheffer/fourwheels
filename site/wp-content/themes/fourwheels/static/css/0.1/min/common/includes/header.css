@@ -4,31 +4,4 @@
  * Author: Joao Guilherme Cheffer Prado
  * Date: 03/2016
  */
-/* =============================================================================
-  Local Variables
-  ========================================================================== */
-/* =============================================================================
-	Header Style
-   ========================================================================== */
-.ads-header {
-  width: remify(720px);
-  height: remify(90px);
-  margin-top: remify(20px);
-  margin-bottom: remify(20px);
-}
-header {
-  background: $default-color-brand-typo-website;
-  width: 100%;
-  height: remify(80px);
-}
-header .logo-url {
-  float: left;
-}
-header .logo-title {
-  height: 100%;
-  width: remify($size-logo);
-  background: url("../../../../images/fw-logo.png") no-repeat 10px 20px;
-  text-indent: $text-visually-hidden;
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbW1vbi9pbmNsdWRlcy9oZWFkZXIuc3R5bCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7O0FBT0E7OztBQVFBOzs7QUFJQTtFQUNFLE9BQThCLGNBQTlCO0VBQ0EsUUFBZ0MsYUFBaEM7RUFDQSxZQUE2QyxhQUE3QztFQUNBLGVBQWdELGFBQWhEOztBQUVGO0VBQ0UsWUFBVyxrQ0FBWDtFQUNBLE9BQU0sS0FBTjtFQUNBLFFBQWtCLGFBQWxCOztBQUNBO0VBQ0UsT0FBTSxLQUFOOztBQUNGO0VBQ0UsUUFBTyxLQUFQO0VBQ0EsT0FBdUIsbUJBQXZCO0VBQ0EsWUFBK0MsMERBQS9DO0VBQ0EsYUFBWSxzQkFBWiIsImZpbGUiOiJjb21tb24vaW5jbHVkZXMvaGVhZGVyLmNzcyIsInNvdXJjZVJvb3QiOiIvc291cmNlLyIsInNvdXJjZXNDb250ZW50IjpbIi8qIVxuICogRm91ciBXaGVlbHMhIC0gY29tbW9uL2hlYWRlci5zdHlsXG4gKiBIZWFkZXIgc3R5bHVzIGZvciBmb3Vyd2hlZWxzIHdlYnNpdGUgMC4xXG4gKiBBdXRob3I6IEpvYW8gR3VpbGhlcm1lIENoZWZmZXIgUHJhZG9cbiAqIERhdGU6IDAzLzIwMTZcbiAqL1xuXG4vKiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuICBMb2NhbCBWYXJpYWJsZXNcbiAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi9cblxuJGFkcy1oZWFkZXItd2lkdGggPSA3MjBweFxuJGFkcy1oZWFkZXItaGVpZ2h0ID0gOTBweFxuJGFkcy1oZWFkZXItdmVydGljYWwtbWFyZ2luID0gMjBweFxuXG4vKiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuXHRIZWFkZXIgU3R5bGVcbiAgID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovXG5cbi5hZHMtaGVhZGVyXG4gIHdpZHRoIHJlbWlmeSgkYWRzLWhlYWRlci13aWR0aClcbiAgaGVpZ2h0IHJlbWlmeSgkYWRzLWhlYWRlci1oZWlnaHQpXG4gIG1hcmdpbi10b3AgcmVtaWZ5KCRhZHMtaGVhZGVyLXZlcnRpY2FsLW1hcmdpbilcbiAgbWFyZ2luLWJvdHRvbSByZW1pZnkoJGFkcy1oZWFkZXItdmVydGljYWwtbWFyZ2luKVxuXG5oZWFkZXJcbiAgYmFja2dyb3VuZCAkZGVmYXVsdC1jb2xvci1icmFuZC10eXBvLXdlYnNpdGVcbiAgd2lkdGggMTAwJVxuICBoZWlnaHQgcmVtaWZ5KDgwcHgpXG4gIC5sb2dvLXVybFxuICAgIGZsb2F0IGxlZnRcbiAgLmxvZ28tdGl0bGVcbiAgICBoZWlnaHQgMTAwJVxuICAgIHdpZHRoIHJlbWlmeSgkc2l6ZS1sb2dvKVxuICAgIGJhY2tncm91bmQgdXJsKCcuLi8uLi8uLi8uLi9pbWFnZXMvZnctbG9nby5wbmcnKSBuby1yZXBlYXQgMTBweCAyMHB4XG4gICAgdGV4dC1pbmRlbnQgJHRleHQtdmlzdWFsbHktaGlkZGVuIl19 */
+.ads-header{width:remify(720px);height:remify(90px);margin-top:remify(20px);margin-bottom:remify(20px)}header{background:$default-color-brand-typo-website;width:100%;height:remify(80px);}header .logo-url{float:left}header .logo-title{height:100%;width:remify($size-logo);background:url("../../../../images/fw-logo.png") no-repeat 10px 20px;text-indent:$text-visually-hidden}
