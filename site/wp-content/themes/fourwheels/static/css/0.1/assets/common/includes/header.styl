@@ -9,6 +9,8 @@
   Local Variables
   ========================================================================== */
 
+$logo-width = 170px
+$logo-height = 40px
 $ads-header-width = 720px
 $ads-header-height = 90px
 $ads-header-vertical-margin = 20px
@@ -29,8 +31,166 @@ header
   height remify(80px)
   .logo-url
     float left
+    width remify($logo-width)
+    height remify($logo-height)
+    margin remify(20px) remify(10px)
   .logo-title
     height 100%
-    width remify($size-logo)
-    background url('../../../../images/fw-logo.png') no-repeat 10px 20px
+    background url('../../../../images/fw-logo.png') no-repeat
+    background-size 100% 100%
     text-indent $text-visually-hidden
+
+/* =============================================================================
+	Nav Top Menu
+   ========================================================================== */
+
+.list-top-menu
+  position relative
+  float right
+  display inline-block
+  margin-right remify(10px)
+  cursor default
+  & > .item
+    display inline-block
+    height 100%
+    vertical-align middle
+    font-size remify(14px)
+    padding 0 remify(9px)
+    cursor pointer
+    transition all .2s ease-in-out
+    &:hover:not(.item-search)
+      background $default-color-text
+      .nav-top-sub-menu
+        opacity 1
+        visibility visible
+    & > a
+      display block
+      height 100%
+      line-height remify(80px)
+      pointer-events none
+      text-transform uppercase
+      &:not(.no-arrow):after
+        content '❯'
+        display inline-block
+        margin-left remify(5px)
+        transform rotateZ(90deg)
+      &:hover
+        color $white
+    .subtitle
+      display inline-block
+    .search-text
+      position relative
+      padding 0 remify(5px)
+      top 50%
+      transform translateY(-50%)
+    &.item-search
+      width remify(100px)
+      .search-text > input
+        width 100%
+        height remify(25px)
+        font-weight 700
+        font-size remify(8px)
+        text-transform uppercase
+      .icon-lookup
+        background url('../../../../images/look-up.png') no-repeat
+        width remify(20px)
+        height remify(20px)
+        position absolute
+        right remify(10px)
+        top remify(0px)
+    &.carros .nav-top-sub-menu
+      height remify(200px)
+    &.testes
+      .nav-top-sub-menu
+        height remify(220px)
+        .side-option
+          background $lessofgray
+          padding remify(20px) 0
+          width 15%
+    &.item-none .nav-top-sub-menu
+      height remify(100px)
+      padding-top remify(40px)
+      text-align center
+      
+  
+
+.nav-top-sub-menu
+  position fixed
+  opacity 0
+  visibility hidden
+  width 100%
+  min-height remify(100px)
+  background $default-color-text
+  left 0
+  border-bottom remify(2px) solid $default-color-brand-typo-website
+  transition all .2s ease-in-out
+  &:hover
+    opacity 1
+    visibility visible
+    & + a
+      background $default-color-text
+  .list-column
+    height 100%
+  .btn-list
+    display block
+    clear both
+    height remify(30px)
+    padding-top remify(6px)
+    margin remify(5px) 0
+    font-size remify(16px)
+    text-align right
+  .side-option
+    display inline-block
+    width 20%
+    padding remify(30px) remify(10px)
+    vertical-align top
+    text-align center
+    .btn-see-all-cars
+      width 100%
+  .list-models, .list-news
+    display inline-block
+    width 75%
+    padding remify(20px)
+    .item
+      display inline-block
+      text-align left
+  .list-models
+    .item
+      width remify(140px)
+      margin remify(10px) 0
+  .list-news
+    padding-top remify(30px)
+    width 80%
+    overflow hidden
+    white-space nowrap
+    text-align center
+    .item
+      $width = 200px
+      
+      width remify($width)
+      margin-left 2%
+      vertical-align top
+      cursor pointer
+      transition opacity .1s ease-in-out
+      &:first-child
+        margin-left 0
+      &.item-w-image
+        img
+          width remify($width)
+          height remify(115px)
+        figcaption
+          margin-top remify(8px)
+          font-size remify(16px)
+          line-height remify(20px)
+          font-weight 700
+          white-space normal
+      &:hover
+        opacity 0.6
+        a
+          color $white
+      .brief
+        margin-top remify(15px)
+        line-height remify(16px)
+        white-space normal
+        a
+          color $red

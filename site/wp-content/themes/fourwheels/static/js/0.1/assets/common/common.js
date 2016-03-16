@@ -14,6 +14,10 @@
 const njr = njr || {};
 const $ = require('./lib/zepto_custom');
 
+import u from './lib/utils';
+
+let util = new u();
+
 $(function(){
-  console.log('test');
+  util.init();
 });

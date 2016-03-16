@@ -27,8 +27,9 @@ $chartset = 'UTF-8';
     <meta name="keywords" content="abril, quatro rodas" />
     <meta name="description" content='An example of how "quatro rodas" wordpress website would be in practice if it was responsively styled. (not indexable)' />
 
-    <link rel="canonical" href="<?=get_page_link()?>">
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/common/base.css" title="Four Wheels Main CSS">
+    <link rel="canonical" href="<?=get_page_link()?>" />
+    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/common/base.css" title="Four Wheels Main CSS" />
+    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/home/style.css" title="Homepage Four Wheels CSS" />
     
 <?php include('includes/head.inc.php') ?>
     
