@@ -14,10 +14,13 @@
 const njr = njr || {};
 const $ = require('./lib/zepto_custom');
 
-import u from './lib/utils';
+import _utils from './lib/utils';
+import _gui from './lib/gui';
 
-let util = new u();
+let util = new _utils();
+let gui = new _gui();
 
 $(function(){
   util.init();
+  gui.init();
 });

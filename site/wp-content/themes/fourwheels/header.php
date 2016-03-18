@@ -1,6 +1,9 @@
 <?php include('includes/ads/ads-1.inc.php') ?>
         
         <header id="header" role="header">
+            <a href="#" class="js-open-menu-search js-no-href only-UT-tablet">
+                <i class="icon icon-lookup"></i>
+            </a>
             <a href="." title="Home" class="logo-url">
                 <h1 class="logo-title"><?=get_bloginfo('title')?></h1>
             </a>
@@ -8,7 +11,7 @@
             <nav class="nav-top-menu">
                 <ul class="list-top-menu">
                     <li class="item item-named carros">
-                        <a href="#" class="js-no-href">
+                        <a href="#" class="js-no-href" id="no-hide">
                             <h2 class="subtitle">Carros</h2>
                         </a>
                         <nav class="nav-top-sub-menu">
@@ -31,12 +34,12 @@
                         </nav>
                     </li>
                     <li class="item item-named testes">
-                        <a href="#" class="js-no-href">
+                        <a href="#" class="js-no-href" id="no-hide">
                             <h2 class="subtitle">Testes</h2>
                         </a>
                         <nav class="nav-top-sub-menu">
                             <div class="list-column side-option">
-                                <a href="#" class="btn btn-list btn-selected btn-see-all-about-tests js-no-href">Ver tudo de testes &gt;</a>
+                                <a href="#" class="btn btn-list btn-selected btn-see-all-about-tests js-no-href">Ver tudo de testes <span class="only-GT-tablet arrow-right">&gt;</span></a>
                                 <a href="#" class="btn btn-list js-no-href">Comparativos</a>
                                 <a href="#" class="btn btn-list js-no-href">Impressões</a>
                                 <a href="#" class="btn btn-list js-no-href">Longa duração</a>
@@ -95,7 +98,7 @@
                         </nav>
                     </li>
                     <li class="item item-named noticias item-none">
-                        <a href="#" class="js-no-href">
+                        <a href="#" class="js-no-href" id="no-hide">
                             <h2 class="subtitle">Notícias</h2>
                         </a>
                         <nav class="nav-top-sub-menu">
@@ -103,7 +106,7 @@
                         </nav>
                     </li>
                     <li class="item item-named auto-servico item-none">
-                        <a href="#" class="js-no-href">
+                        <a href="#" class="js-no-href" id="no-hide">
                             <h2 class="subtitle">Auto-Serviço</h2>
                         </a>
                         <nav class="nav-top-sub-menu">
@@ -111,7 +114,7 @@
                         </nav>
                     </li>
                     <li class="item item-named guia-de-compras item-none">
-                        <a href="#" class="js-no-href">
+                        <a href="#" class="js-no-href" id="no-hide">
                             <h2 class="subtitle">Guia de Compras</h2>
                         </a>
                         <nav class="nav-top-sub-menu">
@@ -119,15 +122,15 @@
                         </nav>
                     </li>
                     <li class="item item-named tabela-fipe item-none">
-                        <a href="#" class="js-no-href">
+                        <a href="#" class="js-no-href" id="no-hide">
                             <h2 class="subtitle">Tabela Fipe</h2>
                         </a>
                         <nav class="nav-top-sub-menu">
                             <a href="#" class="js-no-href">Sem Itens</a>
                         </nav>
                     </li>
-                    <li class="item item-named assine item-none">
-                        <a href="#assine" class="js-no-href no-arrow">
+                    <li class="item assine item-none">
+                        <a href="#assine" class="js-no-href no-arrow" id="no-hide">
                             <h2 class="subtitle">Assine</h2>
                         </a>
                     </li>
@@ -138,8 +141,18 @@
                         </form>
                     </li>
                 </ul>
-                <a href="" class="js-open-menu js-no-href">
+                
+                <a href="#" class="js-open-menu js-no-href only-UT-tablet" id="no-hide">
+                    <i class="icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </i>
                 </a>
+                
+                <form method="get" class="search-text js-search-text" style="display:none">
+                    <input name="q" type="text" placeholder="Pesquisar">
+                </form>
             </nav>
             <nav class="nav-items-more">
                 <p class="title">+ Acessados</p>

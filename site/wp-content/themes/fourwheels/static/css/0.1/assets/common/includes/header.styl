@@ -46,6 +46,9 @@ header
 	Nav Top Menu
    ========================================================================== */
 
+.nav-top-menu
+  position relative
+
 .list-top-menu
   position relative
   float right
@@ -59,7 +62,7 @@ header
     font-size remify(14px)
     padding 0 remify(9px)
     transition all .2s ease-in-out
-    &:hover:not(.item-search)
+    &:hover:not(.item-search), .selected
       background $default-color-text
       .nav-top-sub-menu
         opacity 1
@@ -254,8 +257,138 @@ header
         display none
 
 @media $media-query-homepage-custom-2
+  .js-search-text, .only-UT-tablet
+    display none !important
+  
+  .only-GT-tablet
+    display block
+    &.arrow-right
+      display inline
+
+@media $media-query-homepage-custom-3
+  header
+    .logo-url
+      left 50%
+      position absolute
+      transform translateX(-50%)
+    .js-search-text
+      clear both
+      width 100%
+      input
+        position absolute
+        height remify(30px)
+        bottom remify(-30px)
+        border 0
+        z-index 15
+        width 100%
+  
+  .only-UT-tablet
+    display block !important
+    position relative
+    height 100%
+    width remify(65px)
+    &.selected
+      background $kindared-mobile
+    .icon
+      position absolute
+  .js-open-menu-search
+    float left
+    text-align center
+    z-index 10
+    .icon
+      top remify(33px)
+      background url('../../../../images/fw-lookup.png') no-repeat
+      width remify(16px)
+      height remify(16px)
+      margin-left remify(-10px)
+  .js-open-menu
+    right 0
+    height remify(80px)
+    position absolute
+    &.selected
+      background $kindared-mobile
+      span
+        transform rotateZ(45deg)
+        transform-origin center
+        &:first-child
+          transform rotateZ(-45deg)
+          transform-origin 25px 6px
+        &:last-child
+          opacity 0
+          transform-origin center
+    .icon
+      top remify(25px)
+      right 0
+      width remify(30px)
+      margin-right remify(15px)
+      pointer-events none
+    span
+      background-color #fff
+      border-radius 2px
+      content ''
+      display block
+      position relative
+      width 100%
+      height 4px
+      margin remify(5px) 0
+      transition all .2s ease-in-out
+
   .list-top-menu
     display none
+    width 100%
+    clear both
+    z-index 20
+    background $kindared-mobile
+    margin 0
+    position absolute
+    top remify(80px)
+    & > .item
+      width 100%
+      display block
+      height auto !important
+      min-height remify(50px)
+      border-bottom remify(2px) solid $kindared-border
+      &.selected
+        padding-bottom remify(20px)
+        background $default-color-text
+        & > a:not(.no-arrow):after
+          transform rotateZ(-90deg)
+        .nav-top-sub-menu
+          display block
+          visibility visible
+          opacity 1
+      & > a
+        line-height remify(80px)
+      .nav-top-sub-menu
+        display none
+        width 100%
+        position relative
+        clear both
+        margin-top remify(-20px)
+        height remify(100px)
+        border 0
+      &.carros
+        .nav-top-sub-menu
+          height remify(110px)
+          .side-option
+            display none
+          .list-models
+            width 100%
+            padding remify(5px) remify(15px)
+            .item
+              width remify(100px)
+              margin remify(10px) 0
+      &.testes
+        .nav-top-sub-menu
+          height remify(200px)
+          .side-option
+            width 100%
+            background $default-color-text
+            .btn-list
+              text-align left
+          .list-news
+            display none
+    
 
 @media $media-query-tablet
   .ads-header

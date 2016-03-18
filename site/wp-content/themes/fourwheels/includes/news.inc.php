@@ -20,7 +20,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#" class="js-no-href news-individual">
+                    <a href="#" class="js-no-href news-individual news-ads">
                         <?php include "ads/ads-2.inc.php" ?>
                     </a>
                     <a href="#" class="js-no-href news-individual">
@@ -44,6 +44,7 @@
                 </div>
             </section>
             
+            <hr class="only-UT-mobile" />
             
             <!--OTHERS NEWS-->
             <section class="news-container news-inline news-others">

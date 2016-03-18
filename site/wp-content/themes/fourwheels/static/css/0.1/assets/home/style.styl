@@ -123,8 +123,9 @@ $width-sub-menu = 30px
   .news-individual
     font-size 0
     display inline-block
-    width remify(24%)
-    margin-left remify(16px)
+    width 22%
+    margin-left 4%
+    margin-bottom remify(40px)
     position relative
     min-height remify(320px)
     vertical-align top
@@ -160,3 +161,71 @@ $width-sub-menu = 30px
       text-transform uppercase
       position absolute
       bottom 0px
+
+/* =============================================================================
+	Queries
+   =========================================================================== */
+
+@media $media-query-homepage-custom-3
+  .news-container
+    height 40vh
+
+@media $media-query-tablet
+  .news-container
+    height auto
+  .news-items
+    display block
+    width 100%
+  .news-grid
+    .news-big-left
+      width 100%
+      height 50vh
+    .news-more
+      width 100%
+      height 50vh
+  .news-others
+    .news-individual
+      width 45%
+      margin-left 10%
+      &:nth-child(3)
+        margin-left 0
+
+@media $media-query-mobile
+  body
+    background $white
+  
+  .only-UT-mobile
+    display block
+  
+  .news-container
+    height auto
+  .news-grid
+    background $white
+    img
+      position absolute
+      width remify(600px)
+      height remify(495px)
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+    .news-big-left
+      height remify(250px)
+      overflow hidden
+    .news-more
+      height auto
+      .news-individual
+        display block
+        height remify(250px)
+        width 100%
+        overflow hidden
+      .news-ads
+        height remify(340px)
+        padding remify(20px) 0
+  .news-others
+    .news-individual
+      width 100%
+      margin-left 0
+      figure
+        height remify(250px)
+      .fake-link
+        display none
