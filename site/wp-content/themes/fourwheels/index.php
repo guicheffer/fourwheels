@@ -27,6 +27,7 @@ $theme_color = '#ED1C24';
     <meta name="author" content="guicheffer" />
     <meta name="keywords" content="abril, quatro rodas" />
     <meta name="description" content='An example of how "quatro rodas" wordpress website would be in practice if it was responsively styled. (not indexable)' />
+    <link rel="icon" href="<?=get_template_directory_uri()?>/static/images/favicon.ico" sizes="64x64">
 
     <link rel="canonical" href="<?=get_page_link()?>" />
     
