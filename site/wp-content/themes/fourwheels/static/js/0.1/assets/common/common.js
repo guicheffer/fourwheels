@@ -20,7 +20,7 @@ import _gui from './lib/gui';
 let util = new _utils();
 let gui = new _gui();
 
-$(function(){
+(function(){
   util.init();
   gui.init();
-});
+})() ;
