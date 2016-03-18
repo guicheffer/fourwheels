@@ -7,10 +7,11 @@
  * @since "'Quatro Rodas' - Abril" 2016 (test for interview)
  */
 
-$theme_color = '#ED1C24';
-$title = 'Four Wheels';
+$title = get_bloginfo('title');
 $subtitle = 'Home';
+
 $chartset = 'UTF-8';
+$theme_color = '#ED1C24';
 
 ?>
 <!--[if IE 7]>         <html class="ie ie7 ltie11 ltie10 ltie9 ltie8 lang-pt" lang="pt" prefix="og: http://ogp.me/ns#">           <![endif]-->
@@ -28,8 +29,9 @@ $chartset = 'UTF-8';
     <meta name="description" content='An example of how "quatro rodas" wordpress website would be in practice if it was responsively styled. (not indexable)' />
 
     <link rel="canonical" href="<?=get_page_link()?>" />
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/common/base.css" title="Four Wheels Main CSS" />
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/home/style.css" title="Homepage Four Wheels CSS" />
+    
+    <link type="text/css" rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/common/base.css"/>
+    <link type="text/css" rel="stylesheet" href="<?=get_template_directory_uri()?>/static/css/0.1/min/home/style.css"/>
     
 <?php include('includes/head.inc.php') ?>
     

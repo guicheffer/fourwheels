@@ -14,6 +14,7 @@ $logo-height = 40px
 $ads-header-width = 720px
 $ads-header-height = 90px
 $ads-header-vertical-margin = 20px
+$sub-menu-height = 30px
 
 /* =============================================================================
 	Header Style
@@ -26,9 +27,10 @@ $ads-header-vertical-margin = 20px
   margin-bottom remify($ads-header-vertical-margin)
 
 header
-  background $default-color-brand-typo-website
+  background-color $default-color-brand-typo-website
   width 100%
   height remify(80px)
+  margin-bottom remify($sub-menu-height)
   .logo-url
     float left
     width remify($logo-width)
@@ -56,7 +58,6 @@ header
     vertical-align middle
     font-size remify(14px)
     padding 0 remify(9px)
-    cursor pointer
     transition all .2s ease-in-out
     &:hover:not(.item-search)
       background $default-color-text
@@ -67,7 +68,6 @@ header
       display block
       height 100%
       line-height remify(80px)
-      pointer-events none
       text-transform uppercase
       &:not(.no-arrow):after
         content '❯'
@@ -121,6 +121,7 @@ header
   width 100%
   min-height remify(100px)
   background $default-color-text
+  z-index 10
   left 0
   border-bottom remify(2px) solid $default-color-brand-typo-website
   transition all .2s ease-in-out
@@ -162,21 +163,22 @@ header
     padding-top remify(30px)
     width 80%
     overflow hidden
-    white-space nowrap
     text-align center
     .item
-      $width = 200px
+      $width = 150px
+      $_plus_img = 30px
       
       width remify($width)
-      margin-left 2%
+      margin-left 1%
       vertical-align top
       cursor pointer
       transition opacity .1s ease-in-out
       &:first-child
         margin-left 0
       &.item-w-image
+        width remify($width + $_plus_img)
         img
-          width remify($width)
+          width remify($width + $_plus_img)
           height remify(115px)
         figcaption
           margin-top remify(8px)
@@ -194,3 +196,72 @@ header
         white-space normal
         a
           color $red
+
+.nav-items-more
+  $width = $sub-menu-height
+  
+  display block
+  clear both
+  height remify($width)
+  background $kindablack
+  z-index 5
+  overflow hidden
+  white-space nowrap
+  overflow-x visible !important
+  .title
+    color $white
+    width remify(130px)
+    height 100%
+    background $kindared
+    line-height remify($width)
+    display inline-block
+    font-size remify(15px)
+    position relative
+    text-transform uppercase
+    cursor default
+    text-align center
+    &:after /*triangle*/
+      width 0
+      height 0
+      content ''
+      border-top remify(15px) solid transparent
+      border-bottom remify(15px) solid transparent
+      border-left remify(12px) solid $kindared
+      position absolute
+      right remify(-12px)
+      top 0
+  .items
+    display inline-block
+    margin-left remify($width)
+    vertical-align middle
+    .item
+      display inline
+      margin remify(0px) remify($width - 10px)
+      font-size remify(12px)
+      line-height remify($width)
+      font-weight 700
+      text-transform uppercase
+
+
+/* =============================================================================
+	Queries
+   =========================================================================== */
+
+@media $media-query-homepage-custom-1
+  .list-top-menu
+    & > .item
+      &.item-search
+        display none
+
+@media $media-query-homepage-custom-2
+  .list-top-menu
+    display none
+
+@media $media-query-tablet
+  .ads-header
+    width 90%
+
+@media $media-query-mobile
+  .ads-header
+    max-width remify(300px)
+    height remify(40px)

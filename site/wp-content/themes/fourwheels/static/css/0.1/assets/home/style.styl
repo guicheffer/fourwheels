@@ -1,0 +1,162 @@
+/*!
+ * Four Wheels! - home/style.styl
+ * Home(index) stylus for fourwheels website 0.1
+ * Author: Joao Guilherme Cheffer Prado
+ * Date: 03/2016
+ */
+
+/* =============================================================================
+	Global Variables
+  ========================================================================== */
+
+ @import '../common/variables'
+
+
+/* =============================================================================
+	Mixins
+  ========================================================================== */
+
+ @import '../common/mixins'
+
+
+/* =============================================================================
+  Local Variables
+  ========================================================================== */
+
+$width-sub-menu = 30px
+
+
+/* =============================================================================
+  Utils
+  ========================================================================== */
+
+.content-section
+  padding-top remify($width-sub-menu/4)
+  display block
+  position relative
+
+/* =============================================================================
+  Index
+  ========================================================================== */
+
+/* FIXME: NO DISPLAY FLEX, NOT NOW BECAUSE OF BROWSERS UNEXISTED GOOD POLYFILLS */
+/* FIXME: https://jakearchibald.com/2014/dont-use-flexbox-for-page-layout/ */
+
+.news-container
+  width 100%
+  height 70vh
+  a
+    display block
+    &:hover
+      color $white
+      img
+        filter brightness(1.2)
+  figcaption
+    position absolute
+    bottom 0
+    right 0
+    text-align right
+    margin 0 remify(20px) remify(20px) 0
+
+.news-items
+  display inline-block
+  position relative
+  vertical-align top
+  font-size 0
+  img
+    width 100%
+    height 100%
+  .tag
+    text-transform uppercase
+    font-size remify(14px)
+    &:not(.full):before
+      width remify(12px)
+      height remify(12px)
+      vertical-align top
+      margin-top remify(1px)
+      margin-right remify(5px)
+      background $default-color-brand-typo-website
+      content ''
+      display inline-block
+      border-radius 20%
+    &.full
+      border-radius remify(3px)
+      background $default-color-brand-typo-website
+      padding remify(2px) remify(15px)
+      font-weight 700
+      font-size remify(13px)
+  .title
+    font-weight 500
+
+.news-grid
+  font-size 0
+  background $kindablack
+  .news-big-left
+    width 45%
+    figcaption
+      max-width remify(345px)
+    .title
+      margin-top remify(12px)
+      font-size remify(30px)
+      text-transform uppercase
+  .news-more
+    width 55%
+    figcaption
+      max-width remify(265px)
+    .adsbox
+      height 100%
+      width 90%
+      &:before
+        writing-mode vertical-rl
+    .news-individual
+      width 50%
+      height 50%
+      display inline-block
+      position relative
+    .title
+      margin-top remify(5px)
+      font-size remify(22px)
+
+.news-others
+  height auto
+  margin-top remify(30px)
+  .news-individual
+    font-size 0
+    display inline-block
+    width remify(24%)
+    margin-left remify(16px)
+    position relative
+    min-height remify(320px)
+    vertical-align top
+    &:first-child
+      margin-left 0
+    &:hover
+      .title, .fake-link
+        text-decoration underline
+    figure
+      width 100%
+      height remify(190px)
+      position relative
+      margin-bottom remify(10px)
+    figcaption
+      left 0
+      right auto
+      margin 0 0 remify(10px) remify(10px)
+    .title, .brief
+      color $kindablack
+      margin 0 auto
+      width 98%
+    .title
+      font-weight 700
+      font-size remify(20px)
+    .brief
+      font-weight 600
+      margin-top remify(10px)
+      font-size remify(15px)
+    .fake-link
+      color $default-color-brand-typo-website
+      font-size remify(15px)
+      font-weight 700
+      text-transform uppercase
+      position absolute
+      bottom 0px

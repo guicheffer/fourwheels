@@ -130,6 +130,7 @@ body
 	background $default-background-color
 	max-width remify($max-width-screen)
 	overflow-x hidden
+  margin 0 auto
 	*
 		font-family 'Dosis', 'Helvetica', 'Verdana'
 		box-sizing border-box
@@ -149,19 +150,22 @@ a
 	transform translateX(-50%)
 
 .adsbox
-	background $default-background-ads
-	cursor pointer
-	&:before
-		content 'Publicidade'
-		background $gray-highlight
-		float right
-		opacity 0.6
-		padding remify(2px)
-		transition opacity .1s ease-in-out
-		top 0
-	&:hover
-		&:before
-			opacity 1
+  background $default-background-ads
+  cursor pointer
+  display block
+  &:before
+    content 'Publicidade'
+    background $gray-highlight
+    float right
+    opacity 0.6
+    font-size remify(12px)
+    padding remify(2px)
+    text-transform uppercase
+    transition opacity .1s ease-in-out
+    top 0
+  &:hover
+    &:before
+      opacity 1
 
 .row
 	clear both
@@ -191,7 +195,11 @@ a
 			background lighten($kindablack, 20)
 
 .accessibility-aid
-	visually hidden
+  visibility hidden
+  clip rect(1px,1px,1px,1px)
+  overflow hidden
+  position absolute !important
+  height 1px
 
 .align-right
 	text-align right !important

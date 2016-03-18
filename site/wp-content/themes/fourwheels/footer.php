@@ -1,5 +1,5 @@
         <footer id="footer" role="footer">
-            test footer
+            <a class="accessibility-aid" href="https://github.com/guicheffer/fourwheels">Github repository: https://github.com/guicheffer/fourwheels</a>
         </footer>
 
     </div>
